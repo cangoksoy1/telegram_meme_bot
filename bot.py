@@ -32,15 +32,19 @@ def fetch_token_data(token_symbol):
         "params": []
     }
 
-    response = requests.post(sui_rpc_url, json=payload)
-    data = response.json()
-return {
-    market_cap = data.get('result', {}).get('market_cap', 'N/A')
+       market_cap = data.get('result', {}).get('market_cap', 'N/A')
     latest_buy = data.get('result', {}).get('latest_buy', 'N/A')
     buyer = data.get('result', {}).get('buyer', 'N/A')
     price = data.get('result', {}).get('price', 'N/A')
     image_url = data.get('result', {}).get('image_url', 'URL_OF_THE_IMAGE')  # Replace with actual key if available
-    }
+
+    return {
+        'market_cap': market_cap,
+        'latest_buy': latest_buy,
+        'buyer': buyer,
+        'price': price,
+        'image_url': image_url
+    } 
 
 # Define a command handler function
 def start(update: Update, context: CallbackContext) -> None:
