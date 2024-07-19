@@ -18,7 +18,7 @@ TOKENS = {
     'blub': {'symbol': 'BLUB', 'name': 'Blub'},
     'liquor': {'symbol': 'LIQ', 'name': 'Liquor'},
     'pup': {'symbol': 'PUP', 'name': 'Pup'}
-    'hsui': {'symbol': 'HSUİ', 'name': 'Suicune'}
+    'hsui': {'symbol': 'HSUI', 'name': 'Suicune'}
     # Add more tokens as needed
 }
 
